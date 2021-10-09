@@ -45,14 +45,14 @@
                   class="bg-blue-500 hover:bg-blue-700 rounded text-white text-sm px-3 py-2 mr-3"
                   v-on:click="openModal('edit', index)"
                 >
-                  Update
+                  Actualizar pedido
                 </button>
                 <button
                   type="button"
                   class="bg-red-500 hover:bg-red-700 rounded text-white text-sm px-3 py-2"
                   v-on:click="openModal('delete', index)"
                 >
-                  Delete
+                  Borrar pedido
                 </button>
               </div>
             </td>
