@@ -2,7 +2,7 @@
   <div class="py-6">
     <!-- Heading line -->
     <h1 class="text-4xl tracking-wide text-gray-800 border-b mb-4">
-      {{ heading }}
+      Modulo de ventas
     </h1>
 
     <!-- Add book button -->
@@ -12,7 +12,7 @@
         class="bg-green-500 hover:bg-green-700 text-white px-4 py-2 mb-4 rounded"
         v-on:click="openModal('add')"
       >
-        Add Book
+        Agregar nueva compra
       </button>
     </div>
 
@@ -20,9 +20,9 @@
     <table class="table-fixed">
       <thead>
         <tr>
-          <th class="px-4 py-2">Title</th>
-          <th class="px-4 py-2">Author</th>
-          <th class="px-4 py-2">Read</th>
+          <th class="px-4 py-2">Marca de PC</th>
+          <th class="px-4 py-2">Comprador</th>
+          <th class="px-4 py-2">Estado de factura</th>
           <th></th>
         </tr>
       </thead>
@@ -74,20 +74,20 @@ import Modal from "./Modal.vue";
 const modalStates = {
   NORMAL: {},
   ADD: {
-    heading: "Add book",
-    buttonText: "Add",
+    heading: "Nuevo pedido",
+    buttonText: "Agregar",
     buttonColor: "green",
     showForm: true
   },
   EDIT: {
-    heading: "Update book details",
-    buttonText: "Update",
+    heading: "Actualizacion de pedido",
+    buttonText: "Actualizar",
     buttonColor: "blue",
     showForm: true
   },
   DELETE: {
-    heading: "Are you sure you want to delete the book ?",
-    buttonText: "Delete",
+    heading: "Desea eliminar el pedido ?",
+    buttonText: "Eliminar",
     buttonColor: "red",
     showForm: false
   }
@@ -103,10 +103,10 @@ export default {
   },
   data() {
     return {
-      books: [], // list of books to display in table
-      showModal: false, // variable defining visibility of modal window,
-      modalState: {}, // state modal window is currently in
-      rowEdited: -1 // row currently edited or deleted
+      books: [], 
+      showModal: false, 
+      modalState: {},
+      rowEdited: -1 
     };
   },
   methods: {
