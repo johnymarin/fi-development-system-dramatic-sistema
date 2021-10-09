@@ -1,8 +1,15 @@
+import os
+
 from typing import List
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
 from starlette.middleware.cors import CORSMiddleware
+from sqlalchemy.orm import Session
+
+from . import crud, models, schemas
+from .database import SessionLocal, engine
+
 
 app = FastAPI()
 
