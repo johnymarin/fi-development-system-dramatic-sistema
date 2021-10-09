@@ -20,33 +20,34 @@
                     class="block text-gray-700 text-sm font-bold mb-2"
                     for="title"
                   >
-                    Enter book title
+                    Ingrese marca de PC
                   </label>
                   <input
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="title"
                     type="text"
-                    placeholder="Book title"
+                    placeholder="Marca"
                     v-model="titleIn"
                   />
+                
                 </div>
                 <div class="mb-4">
                   <label
                     class="block text-gray-700 text-sm font-bold mb-2"
                     for="author"
                   >
-                    Enter book author
+                   Ingrese comprador
                   </label>
                   <input
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="author"
                     type="text"
-                    placeholder="Book author"
+                    placeholder="Nombre"
                     v-model="authorIn"
                   />
                 </div>
                 <div>
-                  <label for="read" class="mr-2">Have you read it ?</label>
+                  <label for="read" class="mr-2">Ya cancelo valor?</label>
                   <input type="checkbox" id="read" v-model="readIn" />
                 </div>
               </form>
@@ -67,7 +68,7 @@
                   type="button"
                   v-on:click="closeModal()"
                 >
-                  Cancel
+                  Cancelar
                 </button>
               </div>
             </div>
