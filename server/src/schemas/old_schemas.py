@@ -34,3 +34,25 @@ class User(UserBase):
 
     class Config:
         orm_mode = True
+
+
+
+
+
+
+class ProductBase(BaseModel):
+    title: str
+    description: Optional[str] = None
+    price: int
+
+
+class ProductCreate(ProductBase):
+    pass
+
+
+class Product(ProductBase):
+    id: int
+
+
+    class Config:
+        orm_mode = True
