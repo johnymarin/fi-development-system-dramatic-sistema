@@ -52,20 +52,20 @@ BOOKS: List[Book] = []
 @app.on_event("startup")
 async def startup_event():
     BOOKS.clear()
-    BOOKS.append(Book(title="On the Road", author="Jack Kerouac", read=True))
+    BOOKS.append(Book(title="Asus", author="John Mejia", read=True))
     BOOKS.append(
         Book(
-            title="Harry Potter and the Philosopher's Stone",
-            author="J. K. Rowling",
+            title="Dell",
+            author="Johny Marin",
             read=False,
         )
     )
-    BOOKS.append(Book(title="Green Eggs and Ham", author="Dr. Seuss", read=True))
+    BOOKS.append(Book(title="HP", author="Cristian Agudelo", read=True))
 
 
 def _assert_book_id_exists(book_id: int):
     if book_id < 0 or book_id > len(BOOKS):
-        raise HTTPException(status_code=404, detail="Book not found")
+        raise HTTPException(status_code=404, detail="Comprador not found")
 
 
 #: Describe all Pydantic Response classes
@@ -102,12 +102,12 @@ def return_pong():
     return {"status": "ok", "code": 200}
 
 
-@app.get("/books", response_model=ListBooksResponse)
+@app.get("/pedidos", response_model=ListBooksResponse)
 def get_all_books():
     return {"status": "ok", "code": 200, "data": BOOKS}
 
 
-@app.post("/books", status_code=201, response_model=BookResponse)
+@app.post("/pedidos", status_code=201, response_model=BookResponse)
 def create_book(book: Book):
     BOOKS.append(book)
     return {
@@ -118,7 +118,7 @@ def create_book(book: Book):
     }
 
 
-@app.put("/books/{book_id}", response_model=BookResponse)
+@app.put("/pedido/{book_id}", response_model=BookResponse)
 def edit_book(book_id: int, book: Book):
     _assert_book_id_exists(book_id)
     BOOKS[book_id] = book
@@ -130,7 +130,7 @@ def edit_book(book_id: int, book: Book):
     }
 
 
-@app.delete("/books/{book_id}", response_model=BookResponse)
+@app.delete("/pedido/{book_id}", response_model=BookResponse)
 def remove_book(book_id: int):
     _assert_book_id_exists(book_id)
     removed_book = BOOKS.pop(book_id)

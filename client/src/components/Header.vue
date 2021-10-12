@@ -11,19 +11,19 @@
         <a
           class="text-white hover:text-green-300"
           href="#"
-          >Quienes somos</a
+          >Intranet</a
         >
       </li>
       <li class="mr-6 p-1">
         <a class="text-white hover:text-green-300" href="#"
-          >Contacto</a
+          >Cambiar de modulo</a
         >
       </li>
       <li class="mr-6 p-1">
         <a
           class="text-white hover:text-green-300"
           href="#"
-          >Nuestros clientes</a
+          >Cerrar sesión</a
         >
       </li>
     </ul>

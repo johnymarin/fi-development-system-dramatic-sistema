@@ -167,7 +167,7 @@ export default {
      * Get all books from API
      */
     getBooks() {
-      const path = `${process.env.VUE_APP_BACKEND_API}/books`;
+      const path = `${process.env.VUE_APP_BACKEND_API}/pedidos`;
       axios
         .get(path)
         .then(res => {
@@ -182,7 +182,7 @@ export default {
      * @param payload book details in JSON
      */
     addBook(payload) {
-      const path = `${process.env.VUE_APP_BACKEND_API}/books`;
+      const path = `${process.env.VUE_APP_BACKEND_API}/pedidos`;
       axios
         .post(path, payload)
         .then(() => {
@@ -200,7 +200,7 @@ export default {
      * @param id of book
      */
     editBook(payload, id) {
-      const path = `${process.env.VUE_APP_BACKEND_API}/books/${id}`;
+      const path = `${process.env.VUE_APP_BACKEND_API}/pedidos/${id}`;
       axios
         .put(path, payload)
         .then(() => {
@@ -217,7 +217,7 @@ export default {
      * @param id of book
      */
     removeBook(id) {
-      const path = `${process.env.VUE_APP_BACKEND_API}/books/${id}`;
+      const path = `${process.env.VUE_APP_BACKEND_API}/pedidos/${id}`;
       axios
         .delete(path)
         .then(() => {
